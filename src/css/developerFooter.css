@@ -45,10 +45,3 @@
 .developer-links a:focus .link-icon img {
         filter: invert(59%) sepia(4%) saturate(19%) hue-rotate(338deg) brightness(90%) contrast(87%);
 }
-
-@media screen and (max-width: 500px) {
-        .developer-footer {
-                justify-content: center;
-                padding-bottom: 5rem;
-        }
-}

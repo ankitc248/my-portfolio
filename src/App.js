@@ -1,9 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import "./main.css";
-import "./PortfolioDetails.js";
 import PortfolioDetails from "./PortfolioDetails.js";
-import "./components/developerFooter.jsx";
 import DeveloperFooter from "./components/developerFooter.jsx";
 export default function App() {
   const [wholeLoaded, setWholeLoaded] = useState(false);
@@ -11,12 +9,24 @@ export default function App() {
     PortfolioDetails,
     "sequence"
   );
-  window.addEventListener("load", () => {
-    setWholeLoaded(true);
-  });
+
+  useEffect(() => {
+    const onPageLoad = () => {
+      setWholeLoaded(true);
+    };
+    if (document.readyState === "complete") {
+      onPageLoad();
+    } else {
+      window.addEventListener("load", onPageLoad, false);
+      return () => window.removeEventListener("load", onPageLoad);
+    }
+  }, [wholeLoaded]);
+
   return (
     <main className="main">
-      <div className={`loader-container stickers ${wholeLoaded ? "hidden" : ""}`}>
+      <div
+        className={`loader-container stickers ${wholeLoaded ? "hidden" : ""}`}
+      >
         <span className="loader-text sticker">fetching...</span>
       </div>
       <section className="center-container">

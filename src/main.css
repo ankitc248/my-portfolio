@@ -406,4 +406,7 @@ ul.pretty-list li .list-text {
                 min-height: 100dvh;
                 justify-content: flex-start;
         }
+        .about{
+                padding-top: 2rem;
+        }
 }
