@@ -31,6 +31,7 @@ section {
         /* background-color: #111; */
         padding-block: 2rem;
 }
+
 .loader-container {
         position: fixed;
         background-color: #222;
@@ -42,14 +43,17 @@ section {
         justify-content: center;
         align-items: center;
 }
+
 .loader-container.hidden {
         opacity: 0;
         transition: opacity 0.25s ease;
         z-index: -5;
 }
-.loader-container .sticker{
+
+.loader-container .sticker {
         filter: invert(1);
 }
+
 .cool-container {
         width: clamp(200px, 100%, 600px);
         min-height: 150px;
@@ -102,7 +106,7 @@ section {
 .about .my-name .sub-title {
         font-weight: 600;
         letter-spacing: 2px;
-        color: #aaa;
+        color: var(--accent-color);
         font-size: 10px;
 }
 
@@ -117,8 +121,8 @@ section {
         /* background: #999; */
         border-radius: 50%;
         overflow: hidden;
-        background: linear-gradient(135deg, #777, #2e2e2e);
-        padding: 2px;
+        background: linear-gradient(135deg, #fff, #bbb);
+        padding: 1px;
 }
 
 .about .my-image-container img {
@@ -236,6 +240,7 @@ section.expand-section .wrapper .inside-wrapper {
         text-transform: uppercase;
         letter-spacing: 2px;
         font-weight: 400;
+        color: #eee;
 }
 
 .section-header:hover::before,
@@ -290,10 +295,6 @@ section.expand-section .wrapper .inside-wrapper {
         line-height: 1.5rem;
 }
 
-ul.pretty-list li::before {
-        /* content: "- "; */
-}
-
 .pretty-list li {
         display: flex;
         margin-bottom: 1rem;
@@ -321,7 +322,8 @@ ul.pretty-list li .list-text {
 .sub-title {
         margin-top: 0.25rem;
         font-weight: 400;
-        color: #bbb;
+        color: var(--accent-color);
+        line-height: 1.25rem;
 }
 
 .minus {
@@ -337,6 +339,7 @@ ul.pretty-list li .list-text {
         display: flex;
         justify-content: space-between;
         padding-block: 1rem 0.5rem;
+        gap:1rem;
 }
 
 .description {
@@ -353,6 +356,7 @@ ul.pretty-list li .list-text {
         font-weight: 600;
         color: #ddd;
         font-size: 12px;
+        white-space: nowrap;
 }
 
 .highlighted {
@@ -385,6 +389,8 @@ ul.pretty-list li .list-text {
         align-items: center;
         gap: 0.25rem;
         font-weight: 500;
+        color: var(--accent-color);
+        border: solid 2px var(--accent-color);
 }
 
 .stickers .sticker:hover {
@@ -406,7 +412,8 @@ ul.pretty-list li .list-text {
                 min-height: 100dvh;
                 justify-content: flex-start;
         }
-        .about{
-                padding-top: 2rem;
+
+        .about {
+                padding-top: 3rem;
         }
 }

@@ -36,7 +36,7 @@ export default function App() {
               <div className="my-image">
                 <div className="my-image-container">
                   <img
-                    src="/assets/images/profile-image.jpg"
+                    src="/assets/images/profile-image-blur.jpg"
                     alt="profile"
                     width={100}
                     height={100}
@@ -61,7 +61,11 @@ export default function App() {
             </section>
             <div className="expandable-sections">
               {sortedPortfolioDetails.map((value) => (
-                <ExpandSection values={value[1]} key={value[0]} />
+                <ExpandSection
+                  values={value[1]}
+                  key={value[0]}
+                  uniqueIdentifier={value[0]}
+                />
               ))}
             </div>
           </div>
@@ -71,7 +75,7 @@ export default function App() {
   );
 }
 
-const ExpandSection = ({ values }) => {
+const ExpandSection = ({ values, uniqueIdentifier }) => {
   const [expanded, setExpanded] = useState(false);
   return (
     <section className={`expand-section ${expanded ? "expanded" : ""}`}>
@@ -98,56 +102,55 @@ const ExpandSection = ({ values }) => {
         <div className="inside-wrapper">
           <div className="section-body">
             {values.description && (
-              <p className="padded">{transformText(values.description)}</p>
+              <p className="padded" key={uniqueIdentifier + "_description"}>
+                {transformText(values.description)}
+              </p>
             )}
             {values.content &&
               values.content.map((item, index) => (
                 <>
                   {item.type === "stickers" && (
-                    <div key={index} className="stickers padded">
-                      {item.items &&
-                        item.items.map((sticker, stickerIndex) => (
-                          <div className="sticker" key={stickerIndex}>
-                            {sticker.icon && (
-                              <img
-                                src={sticker.icon}
-                                alt={sticker.text + "-icon"}
-                                className="svg icon black"
-                                height={15}
-                              />
-                            )}
-                            <span className="text">{sticker.text}</span>
-                          </div>
-                        ))}
-                    </div>
+                    <Stickers
+                      values={item}
+                      key={uniqueIdentifier + "_stickers_" + index}
+                      uniqueIdentifier={uniqueIdentifier + "_stickers_" + index}
+                    />
                   )}
                   {item.subTitle && (
-                    <div className="padded" key={index}>
-                      <div className="title-with-year">
-                        <div className="left-side">
-                          <h2 className="title">{item.title}</h2>
-                          <h4 className="sub-title">{item.subTitle}</h4>
-                        </div>
-                        <div className="right-side">
-                          <h4 className="sub-title year">{item.date}</h4>
-                        </div>
-                      </div>
-                      <div className="text-block">
-                        {transformText(item.about)}
-                      </div>
-                    </div>
+                    <TitleWithYear
+                      values={item}
+                      key={uniqueIdentifier + "_title_" + index}
+                    />
                   )}
                   {item.content &&
                     item.content.map((subItem, subIndex) => {
                       if (subItem.type === "text") {
                         return (
-                          <p key={subIndex} className="padded">
+                          <p
+                            key={
+                              uniqueIdentifier +
+                              "_" +
+                              index +
+                              "_subitem_text_" +
+                              subIndex
+                            }
+                            className="padded"
+                          >
                             {subItem.body}
                           </p>
                         );
                       } else if (subItem.type === "full-image") {
                         return (
-                          <div key={subIndex} className="full-image">
+                          <div
+                            key={
+                              uniqueIdentifier +
+                              "_" +
+                              index +
+                              "_subitem_image_" +
+                              subIndex
+                            }
+                            className="full-image"
+                          >
                             <img src={subItem.src} alt="" />
                             <span className="img-caption">
                               {subItem.caption}
@@ -156,27 +159,23 @@ const ExpandSection = ({ values }) => {
                         );
                       } else if (subItem.type === "ul-list") {
                         return (
-                          <div key={subIndex} className="list padded">
-                            <ul className="pretty-list">
-                              {subItem.items &&
-                                subItem.items.map((listItem, listIndex) => (
-                                  <li key={listIndex}>
-                                    <span className="list-bullet">
-                                      <img
-                                        src="/assets/svg-icons/asterisk-circle-fill.svg"
-                                        alt="icon"
-                                        width={17}
-                                        height={17}
-                                        className="svg icon black"
-                                      />
-                                    </span>
-                                    <span className="list-text">
-                                      {transformText(listItem)}
-                                    </span>
-                                  </li>
-                                ))}
-                            </ul>
-                          </div>
+                          <ULList
+                            key={
+                              uniqueIdentifier +
+                              "_" +
+                              index +
+                              "_subitem_list_" +
+                              subIndex
+                            }
+                            uniqueIdentifier={
+                              uniqueIdentifier +
+                              "_" +
+                              index +
+                              "_subitem_list_" +
+                              subIndex
+                            }
+                            values={subItem}
+                          />
                         );
                       }
                       return null; // In case the item type is not recognized
@@ -203,6 +202,77 @@ const ExpandSection = ({ values }) => {
       </div>
     </section>
   );
+};
+
+const TitleWithYear = ({ values, uniqueIdentifier }) => {
+  return (
+    <div className="padded">
+      <div className="title-with-year">
+        <div className="left-side">
+          <h2 className="title">{values.title}</h2>
+          <h4 className="sub-title">{values.subTitle}</h4>
+        </div>
+        <div className="right-side">
+          <h4 className="sub-title year">{values.date}</h4>
+        </div>
+      </div>
+      <div className="text-block">{transformText(values.about)}</div>
+    </div>
+  );
+};
+
+const Stickers = ({ values, uniqueIdentifier }) => {
+  return (
+    <div className="stickers padded">
+      {values.items &&
+        values.items.map((sticker, stickerIndex) => (
+          <div
+            className="sticker"
+            key={uniqueIdentifier + "sticker_" + stickerIndex}
+          >
+            {sticker.icon && (
+              <img
+                src={sticker.icon}
+                alt={sticker.text + "-icon"}
+                className="svg icon black"
+                height={15}
+              />
+            )}
+            <span className="text">{sticker.text}</span>
+          </div>
+        ))}
+    </div>
+  );
+};
+
+const ULList = ({ values, uniqueIdentifier }) => {
+  return (
+    <div className="list padded">
+      <ul className="pretty-list">
+        {values.items &&
+          values.items.map((listItem, listIndex) => (
+            <li key={uniqueIdentifier + "_" + listIndex}>
+              <span className="list-bullet">
+                <img
+                  src="/assets/svg-icons/asterisk-circle-fill.svg"
+                  alt="icon"
+                  width={15}
+                  height={15}
+                  className="svg icon black"
+                />
+              </span>
+              <span className="list-text">{transformText(listItem)}</span>
+            </li>
+          ))}
+      </ul>
+    </div>
+  );
+};
+
+const sortObjectByKeyAndConvertToArray = (obj, key) => {
+  const array = Object.entries(obj);
+  array.sort((a, b) => a[1][key] - b[1][key]);
+  return array;
 };
 
 const transformText = (inputString) => {
@@ -238,10 +308,4 @@ const transformText = (inputString) => {
       })}
     </span>
   );
-};
-
-const sortObjectByKeyAndConvertToArray = (obj, key) => {
-  const array = Object.entries(obj);
-  array.sort((a, b) => a[1][key] - b[1][key]);
-  return array;
 };
