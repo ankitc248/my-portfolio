@@ -135,7 +135,7 @@ const PortfolioDetails = {
         title: "Sticky notes app",
         date: "ReactJS",
         about:
-          "One of starting projects in ReactJS. Took inspiration from to-do list app projects and put my own take on it. You can view it  @here@https://sticky-notes-react-js.vercel.app@.",
+          "One of my starting projects in ReactJS. Took inspiration from to-do list app projects and put my own spin on it. You can view it  @here@https://sticky-notes-react-js.vercel.app@.",
         content: [
           {
             type: "text",
