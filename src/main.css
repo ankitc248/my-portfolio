@@ -15,6 +15,7 @@
         text-wrap: pretty;
         letter-spacing: 0.25px;
         position: relative;
+        scroll-behavior: smooth;
 }
 
 section {
@@ -42,16 +43,14 @@ section {
         display: flex;
         justify-content: center;
         align-items: center;
+        left:0;top:0;
+        transition: all 0.2s ease;
 }
 
 .loader-container.hidden {
-        opacity: 0;
-        transition: opacity 0.25s ease;
-        z-index: -5;
-}
-
-.loader-container .sticker {
-        filter: invert(1);
+        /* opacity: 0; */
+        top:100%;
+        /* z-index: -5; */
 }
 
 .cool-container {
@@ -195,7 +194,6 @@ section.expand-section .wrapper {
         display: grid;
         grid-template-rows: 0fr;
         transition: all 0.25s ease-out;
-        overflow: hidden;
 }
 
 section.expand-section .wrapper .inside-wrapper {
@@ -215,7 +213,6 @@ section.expand-section .wrapper .inside-wrapper {
         z-index: 1;
         cursor: pointer;
 }
-
 .section-footer {
         padding: 0.5rem 1rem;
         justify-content: center;
