@@ -138,22 +138,22 @@ const PortfolioDetails = {
           "One of my starting projects in ReactJS. Took inspiration from to-do list app projects and put my own spin on it. You can view it  @here@https://sticky-notes-react-js.vercel.app@.",
         content: [
           {
+            type: "full-image",
+            src: "/assets/images/sticky-notes-app.png",
+            caption: "Sticky notes app",
+          },
+          {
             type: "text",
             body: "This project taught me:",
           },
           {
             type: "ul-list",
             items: [
-              "The basics of ReactJS. Improved my understanding of it's most used hooks *useState()* and *useEffect()*.",
+              "The basics of ReactJS. Improved my understanding of it's most used hooks.",
               "The ins and outs of *Framer motion* library and it's usage.",
               "Storing user information in the form of cookies and integrating them seamlessly with a React app.",
             ],
-          },
-          {
-            type: "full-image",
-            src: "/assets/images/sticky-notes-app.png",
-            caption: "Sticky notes app",
-          },
+          }
         ],
       },
       {
@@ -163,6 +163,11 @@ const PortfolioDetails = {
         about:
           "A more complex web app which incorporates multiple APIs to locate streams for any piece of media. You can view it  @here@https://streaming-locator.vercel.app@.",
         content: [
+          {
+            type: "full-image",
+            src: "/assets/images/streaming-finder-app.png",
+            caption: "Streams finder app",
+          },
           {
             type: "text",
             body: "This project taught me:",
@@ -174,11 +179,6 @@ const PortfolioDetails = {
               "Working with multiple APIs to fetch data and manage their dependency on each other.",
               "Improved my approach to responsive design and user experience. This made the app experience more interesting for all devices.",
             ],
-          },
-          {
-            type: "full-image",
-            src: "/assets/images/streaming-finder-app.png",
-            caption: "Streams finder app",
           },
         ],
       },

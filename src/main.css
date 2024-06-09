@@ -17,7 +17,6 @@
         position: relative;
         scroll-behavior: smooth;
 }
-
 section {
         width: 100%;
 }
@@ -49,7 +48,7 @@ section {
 
 .loader-container.hidden {
         /* opacity: 0; */
-        top:100%;
+        top:-100%;
         /* z-index: -5; */
 }
 
