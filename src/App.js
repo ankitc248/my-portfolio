@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import "./main.css";
-import PortfolioDetails from "./PortfolioDetails.js";
+import PortfolioDetails from "./PortfolioDetails.json";
 import DeveloperFooter from "./components/developerFooter.jsx";
+console.log(PortfolioDetails);
 export default function App() {
   const [wholeLoaded, setWholeLoaded] = useState(false);
   const sortedPortfolioDetails = sortObjectByKeyAndConvertToArray(
-    PortfolioDetails,
+    PortfolioDetails.sections,
     "sequence"
   );
 
@@ -36,7 +37,7 @@ export default function App() {
               <div className="my-image">
                 <div className="my-image-container">
                   <img
-                    src="/assets/images/profile-image-blur.jpg"
+                    src={PortfolioDetails.hero.profileImage}
                     alt="profile"
                     width={100}
                     height={100}
@@ -45,15 +46,13 @@ export default function App() {
                 </div>
               </div>
               <div className="my-name">
-                <h1 className="title">Ankit Singh Chauhan</h1>
-                <h4 className="sub-title">AVAILABLE FOR HIRE</h4>
+                <h1 className="title">{PortfolioDetails.hero.name}</h1>
+                <h4 className="sub-title">
+                  {transformText(PortfolioDetails.hero.subTitle)}
+                </h4>
               </div>
               <div className="my-text">
-                <p>
-                  Self taught web developer with a passion for learning new web
-                  technologies. Constantly looking to develop my skills while
-                  also growing professionally.
-                </p>
+                <p>{transformText(PortfolioDetails.hero.aboutText)}</p>
               </div>
               <div className="my-links">
                 <DeveloperFooter />
