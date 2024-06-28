@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import "./App.css";
-import "./main.css";
+import "./css/main.css";
+import "./css/light.css";
 import PortfolioDetails from "./PortfolioDetails.json";
 import DeveloperFooter from "./components/developerFooter.jsx";
-console.log(PortfolioDetails);
 export default function App() {
   const [wholeLoaded, setWholeLoaded] = useState(false);
+  const [theme, setTheme] = useState("dark");
   const sortedPortfolioDetails = sortObjectByKeyAndConvertToArray(
     PortfolioDetails.sections,
     "sequence"
@@ -21,10 +21,12 @@ export default function App() {
       window.addEventListener("load", onPageLoad, false);
       return () => window.removeEventListener("load", onPageLoad);
     }
+    // const prefersLightMode = window.matchMedia("(prefers-color-scheme: light)");
+    // if (prefersLightMode.matches) setTheme("light");
   }, [wholeLoaded]);
 
   return (
-    <main className="main">
+    <main className={`main ${theme}`}>
       <div
         className={`loader-container stickers ${wholeLoaded ? "hidden" : ""}`}
       >
@@ -33,6 +35,19 @@ export default function App() {
       <section className="center-container">
         <div className="cool-container">
           <div className="cool-body">
+            <button
+              type="button"
+              className="theme-toggle"
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            >
+              <img
+                src="/assets/svg-icons/dark-theme.svg"
+                alt="icon"
+                width={20}
+                height={20}
+                className="svg icon black"
+              />
+            </button>
             <section className="about">
               <div className="my-image">
                 <div className="my-image-container">
@@ -78,7 +93,11 @@ const ExpandSection = ({ values, uniqueIdentifier }) => {
   const [expanded, setExpanded] = useState(false);
   return (
     <section className={`expand-section ${expanded ? "expanded" : ""}`}>
-      <div className="section-header" onClick={() => setExpanded(!expanded)}>
+      <button
+        type="button"
+        className="section-header"
+        onClick={() => setExpanded(!expanded)}
+      >
         <h1>{values.header}</h1>
         <span className="icon">
           <img
@@ -96,7 +115,7 @@ const ExpandSection = ({ values, uniqueIdentifier }) => {
             height={20}
           />
         </span>
-      </div>
+      </button>
       <div className="wrapper">
         <div className="inside-wrapper">
           <div className="section-body">
@@ -182,7 +201,8 @@ const ExpandSection = ({ values, uniqueIdentifier }) => {
                 </>
               ))}
           </div>
-          <div
+          <button
+            type="button"
             className="section-footer"
             onClick={() => setExpanded(!expanded)}
           >
@@ -196,7 +216,7 @@ const ExpandSection = ({ values, uniqueIdentifier }) => {
                 className="svg icon black"
               />
             </span>
-          </div>
+          </button>
         </div>
       </div>
     </section>

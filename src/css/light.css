@@ -1,0 +1,103 @@
+:root:has(main.light) {
+        --accent-color: #00AA00;
+
+        body {
+                background: #EEE;
+        }
+
+        .main {
+                color: #111;
+        }
+
+        .loader-container {
+                background-color: #fff;
+        }
+
+        .cool-container {
+                /* background: linear-gradient(135deg, #777, #666); */
+                background: #444;
+                box-shadow: 0px 4px 8px #ddd;
+        }
+
+        .cool-body {
+                /* background: linear-gradient(135deg, #FFF, #FFF); */
+                background: #F5F5F5;
+        }
+
+        .about .my-name .title {
+                color: #111;
+        }
+
+        .about .my-image-container {
+                background: linear-gradient(135deg, #111, #111);
+        }
+
+        section.expand-section {
+                border-color: #444;
+        }
+
+        .section-header::before,
+        .section-footer::before {
+                background: linear-gradient(135deg, #DDD, #DDD);
+        }
+
+        .section-header h1 {
+                color: #222;
+                font-weight: 600;
+        }
+
+        .title {
+                color: #111;
+        }
+
+        .description {
+                color: #333;
+        }
+
+        .year {
+                background-color: #111;
+                color: #ddd;
+        }
+
+        .highlighted {
+                color: #111;
+        }
+
+        .inline-link {
+                color: #111;
+        }
+
+        .stickers .sticker {
+                background-color: transparent;
+                border-color: #444;
+                color: #222;
+                font-weight: 600;
+        }
+
+        .list-bullet .icon {
+                filter: invert(0) contrast(1) !important;
+        }
+
+        .svg.icon.black {
+                filter: invert(0) contrast(1);
+        }
+
+        .sub-title {
+                font-weight: 500;
+        }
+
+        .theme-toggle {
+                background-color: #EEE;
+        }
+
+        .developer-links a .link-icon img,
+        .developer-links a .link-icon img,
+        .developer-links a .link-icon img {
+                filter: invert(59%) sepia(4%) saturate(19%) hue-rotate(338deg) brightness(10%) contrast(87%);
+        }
+        .developer-links a:hover .link-icon img,
+        .developer-links a:active .link-icon img,
+        .developer-links a:focus .link-icon img {
+                filter: invert(59%) sepia(4%) saturate(19%) hue-rotate(338deg) brightness(50%) contrast(87%);
+        }
+}
