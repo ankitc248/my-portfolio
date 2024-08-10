@@ -3,7 +3,9 @@
     "name": "Ankit Singh Chauhan",
     "subTitle": "AVAILABLE FOR HIRE",
     "aboutText": "Self taught web developer with a passion for learning new web technologies. Constantly looking to develop my skills while also growing professionally.",
-    "profileImage": "/assets/images/profile-image-blur.jpg"
+    "profileImage": "/assets/images/profile-image-blur.jpg",
+    "accentColorDark": "#C7F0A8",
+    "accentColorLight": "#00AA00"
   },
   "sections": {
     "workExperience": {
@@ -60,7 +62,7 @@
             {
               "type": "ul-list",
               "items": [
-                "Managed the company's employee portal @tukagroup.com@https://tukagroup.com/@. Learned to do basic operations in AWS to maintain the access of various domains under them. Familiarized myself with Git commands to implement new changes in codebase of the website. Learned basic angular to handle and implement pagination on data retrieved from various APIs.",
+                "Managed the company's employee portal @tukagroup.com@https://tukagroup.com/@. Learned to do basic operations in *AWS* to maintain the access of various domains under them. Familiarized myself with *Git* commands to implement new changes in codebase of the website. Learned basic angular to handle and implement pagination on data retrieved from various APIs.",
                 "Reworked @eclothes.com@https://eclothes.tukatech.com/@ to be more reponsive and good looking. Added many new features in this website like admin control center, better forms with vastly improved file handling, integration with the company's sister site @tukaweb.com@https://tukaweb.com/@ to track user subscription. Also developed a new feature to integrate the website with Shopify sites and APIs."
               ]
             },
@@ -150,16 +152,8 @@
     "projects": {
       "sequence": 3,
       "header": "Projects",
-      "description": "I am always working on a project whenever I get the time. This helps me in exploring new ideas and learning new technologies. Currently most of my projects are related to JS Frameworks like *NodeJS*, *ReactJS* and just recently *NextJS*.",
+      "description": "I am always working on a project whenever I get the time. This helps me in exploring new ideas and learning new technologies. Currently most of my projects are related to JS Frameworks like *NodeJS*, *ReactJS* and just recently *NextJS*. Some of the notable ones are listed below.",
       "content": [
-        {
-          "content": [
-            {
-              "type": "text",
-              "body": "Some of the notable ones are listed below."
-            }
-          ]
-        },
         {
           "subTitle": "A different take on a to-do list",
           "title": "Sticky notes app",
@@ -186,7 +180,7 @@
           ]
         },
         {
-          "subTitle": "Using APIs to locate streams for media",
+          "subTitle": "Streaming sources for any media",
           "title": "Streaming locator app",
           "date": "ReactJS",
           "about": "A more complex web app which incorporates multiple APIs to locate streams for any piece of media. You can view it  @here@https://streaming-locator.vercel.app@.",
@@ -206,6 +200,56 @@
                 "Concept of debouncing and throttling. Used these to make the search more seamless and efficient.",
                 "Working with multiple APIs to fetch data and manage their dependency on each other.",
                 "Improved my approach to responsive design and user experience. This made the app experience more interesting for all devices."
+              ]
+            }
+          ]
+        },
+        {
+          "subTitle": "Syncing lyrics with songs",
+          "title": "Lyrical player",
+          "date": "ReactJS",
+          "about": "A custom music player that utlizes Media Player API and retrieves lyrics for a small selection of songs. The lyrics are synced with the music and can be used to seek to any part of the song. You can view it  @here@https://lyrical-player.vercel.app/@.",
+          "content": [
+            {
+              "type": "full-image",
+              "src": "/assets/images/lyrical-player.jpg",
+              "caption": "Lyrical player"
+            },
+            {
+              "type": "text",
+              "body": "This project taught me:"
+            },
+            {
+              "type": "ul-list",
+              "items": [
+                "Handle media on the web, like buffering, seeking, loading etc.",
+                "Understand the differences between how mobile and desktop handle media.",
+                "Improved my understanding of how to handle media timers to sync the lyrics to the song and vice versa."
+              ]
+            }
+          ]
+        },
+        {
+          "subTitle": "Classic snake remade in ReactJS",
+          "title": "Snakey boi",
+          "date": "ReactJS",
+          "about": "A fun project in which I tried to recreate the classic snake game we used to play in our childhood using react fundamentals. You can view it  @here@https://snakey-boi.vercel.app/@.",
+          "content": [
+            {
+              "type": "full-image",
+              "src": "/assets/images/snakey-boi.png",
+              "caption": "Snakey boi"
+            },
+            {
+              "type": "text",
+              "body": "This project taught me:"
+            },
+            {
+              "type": "ul-list",
+              "items": [
+                "The basics of game design, including game loop, game win and lose conditions and player motivators like highscores.",
+                "Handling different modes of inputs. Keyboard, touch, and mouse.",
+                "Implementing complex animations to make the user experience more interesting."
               ]
             }
           ]

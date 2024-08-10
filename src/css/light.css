@@ -16,6 +16,7 @@
         .cool-container {
                 /* background: linear-gradient(135deg, #777, #666); */
                 background: #444;
+                -webkit-box-shadow: 0px 4px 8px #ddd;
                 box-shadow: 0px 4px 8px #ddd;
         }
 
@@ -29,6 +30,7 @@
         }
 
         .about .my-image-container {
+                background: -o-linear-gradient(315deg, #111, #111);
                 background: linear-gradient(135deg, #111, #111);
         }
 
@@ -38,6 +40,7 @@
 
         .section-header::before,
         .section-footer::before {
+                background: -o-linear-gradient(315deg, #DDD, #DDD);
                 background: linear-gradient(135deg, #DDD, #DDD);
         }
 
@@ -75,10 +78,12 @@
         }
 
         .list-bullet .icon {
+                -webkit-filter: invert(0) contrast(1) !important;
                 filter: invert(0) contrast(1) !important;
         }
 
         .svg.icon.black {
+                -webkit-filter: invert(0) contrast(1);
                 filter: invert(0) contrast(1);
         }
 
@@ -93,11 +98,43 @@
         .developer-links a .link-icon img,
         .developer-links a .link-icon img,
         .developer-links a .link-icon img {
+                -webkit-filter: invert(59%) sepia(4%) saturate(19%) hue-rotate(338deg) brightness(10%) contrast(87%);
                 filter: invert(59%) sepia(4%) saturate(19%) hue-rotate(338deg) brightness(10%) contrast(87%);
         }
+
         .developer-links a:hover .link-icon img,
         .developer-links a:active .link-icon img,
         .developer-links a:focus .link-icon img {
+                -webkit-filter: invert(59%) sepia(4%) saturate(19%) hue-rotate(338deg) brightness(50%) contrast(87%);
                 filter: invert(59%) sepia(4%) saturate(19%) hue-rotate(338deg) brightness(50%) contrast(87%);
+        }
+
+        .workExperience,
+        .projects {
+                .section-content {
+                        border-top: solid 2px #AAA;
+                        border-bottom: solid 2px #AAA;
+                }
+
+                .section-content.closed {
+                        background-color: #222;
+                        background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#EEE));
+                        background: -o-linear-gradient(#EEE, #EEE);
+                        background: linear-gradient(#EEE, #EEE);
+                }
+
+                .section-content.closed:hover {
+                        -webkit-box-shadow: 0px 2px 4px 0px #DDD;
+                        box-shadow: 0px 2px 4px 0px #DDD;
+                }
+
+                .section-closer {
+                        background-color: #111;
+
+                        img {
+                                -webkit-filter: invert(1) contrast(1) !important;
+                                filter: invert(1) contrast(1) !important;
+                        }
+                }
         }
 }

@@ -21,12 +21,18 @@ export default function App() {
       window.addEventListener("load", onPageLoad, false);
       return () => window.removeEventListener("load", onPageLoad);
     }
-    // const prefersLightMode = window.matchMedia("(prefers-color-scheme: light)");
-    // if (prefersLightMode.matches) setTheme("light");
   }, [wholeLoaded]);
 
   return (
-    <main className={`main ${theme}`}>
+    <main
+      className={`main ${theme}`}
+      style={{
+        "--accent-color":
+          theme === "light"
+            ? PortfolioDetails.hero.accentColorLight
+            : PortfolioDetails.hero.accentColorDark,
+      }}
+    >
       <div
         className={`loader-container stickers ${wholeLoaded ? "hidden" : ""}`}
       >
@@ -62,9 +68,9 @@ export default function App() {
               </div>
               <div className="my-name">
                 <h1 className="title">{PortfolioDetails.hero.name}</h1>
-                <h4 className="sub-title">
+                <h2 className="sub-title">
                   {transformText(PortfolioDetails.hero.subTitle)}
-                </h4>
+                </h2>
               </div>
               <div className="my-text">
                 <p>{transformText(PortfolioDetails.hero.aboutText)}</p>
@@ -92,7 +98,11 @@ export default function App() {
 const ExpandSection = ({ values, uniqueIdentifier }) => {
   const [expanded, setExpanded] = useState(false);
   return (
-    <section className={`expand-section ${expanded ? "expanded" : ""}`}>
+    <section
+      className={`expand-section ${
+        expanded ? "expanded" : ""
+      } ${uniqueIdentifier}`}
+    >
       <button
         type="button"
         className="section-header"
@@ -126,79 +136,11 @@ const ExpandSection = ({ values, uniqueIdentifier }) => {
             )}
             {values.content &&
               values.content.map((item, index) => (
-                <>
-                  {item.type === "stickers" && (
-                    <Stickers
-                      values={item}
-                      key={uniqueIdentifier + "_stickers_" + index}
-                      uniqueIdentifier={uniqueIdentifier + "_stickers_" + index}
-                    />
-                  )}
-                  {item.subTitle && (
-                    <TitleWithYear
-                      values={item}
-                      key={uniqueIdentifier + "_title_" + index}
-                    />
-                  )}
-                  {item.content &&
-                    item.content.map((subItem, subIndex) => {
-                      if (subItem.type === "text") {
-                        return (
-                          <p
-                            key={
-                              uniqueIdentifier +
-                              "_" +
-                              index +
-                              "_subitem_text_" +
-                              subIndex
-                            }
-                            className="padded"
-                          >
-                            {subItem.body}
-                          </p>
-                        );
-                      } else if (subItem.type === "full-image") {
-                        return (
-                          <div
-                            key={
-                              uniqueIdentifier +
-                              "_" +
-                              index +
-                              "_subitem_image_" +
-                              subIndex
-                            }
-                            className="full-image"
-                          >
-                            <img src={subItem.src} alt="" />
-                            <span className="img-caption">
-                              {subItem.caption}
-                            </span>
-                          </div>
-                        );
-                      } else if (subItem.type === "ul-list") {
-                        return (
-                          <ULList
-                            key={
-                              uniqueIdentifier +
-                              "_" +
-                              index +
-                              "_subitem_list_" +
-                              subIndex
-                            }
-                            uniqueIdentifier={
-                              uniqueIdentifier +
-                              "_" +
-                              index +
-                              "_subitem_list_" +
-                              subIndex
-                            }
-                            values={subItem}
-                          />
-                        );
-                      }
-                      return null; // In case the item type is not recognized
-                    })}
-                </>
+                <SectionBody
+                  item={item}
+                  uniqueIdentifier={uniqueIdentifier}
+                  index={index}
+                />
               ))}
           </div>
           <button
@@ -220,6 +162,92 @@ const ExpandSection = ({ values, uniqueIdentifier }) => {
         </div>
       </div>
     </section>
+  );
+};
+
+const SectionBody = ({ item, uniqueIdentifier, index }) => {
+  const [closed, setClosed] = useState(true);
+  return (
+    <button
+      className={`section-content ${closed ? "closed" : ""}`}
+      onClick={() => (closed ? setClosed(!closed) : null)}
+    >
+      <button
+        className="section-closer top"
+        tabIndex={closed ? -1 : 0}
+        onClick={() => setClosed(true)}
+      >
+        <img
+          src="/assets/svg-icons/close.svg"
+          alt="icon"
+          className="svg icon black"
+        />
+      </button>
+      {item.type === "stickers" && (
+        <Stickers
+          values={item}
+          key={uniqueIdentifier + "_stickers_" + index}
+          uniqueIdentifier={uniqueIdentifier + "_stickers_" + index}
+        />
+      )}
+      {item.subTitle && (
+        <TitleWithYear
+          values={item}
+          key={uniqueIdentifier + "_title_" + index}
+        />
+      )}
+      {item.content &&
+        item.content.map((subItem, subIndex) => {
+          if (subItem.type === "text") {
+            return (
+              <p
+                key={
+                  uniqueIdentifier + "_" + index + "_subitem_text_" + subIndex
+                }
+                className="padded"
+              >
+                {subItem.body}
+              </p>
+            );
+          } else if (subItem.type === "full-image") {
+            return (
+              <div
+                key={
+                  uniqueIdentifier + "_" + index + "_subitem_image_" + subIndex
+                }
+                className="full-image"
+              >
+                <img src={subItem.src} alt="" loading="lazy" />
+                <span className="img-caption">{subItem.caption}</span>
+              </div>
+            );
+          } else if (subItem.type === "ul-list") {
+            return (
+              <ULList
+                key={
+                  uniqueIdentifier + "_" + index + "_subitem_list_" + subIndex
+                }
+                uniqueIdentifier={
+                  uniqueIdentifier + "_" + index + "_subitem_list_" + subIndex
+                }
+                values={subItem}
+              />
+            );
+          }
+          return null; // In case the item type is not recognized
+        })}
+      <button
+        className="section-closer bottom"
+        tabIndex={closed ? -1 : 0}
+        onClick={() => setClosed(true)}
+      >
+        <img
+          src="/assets/svg-icons/close.svg"
+          alt="icon"
+          className="svg icon black"
+        />
+      </button>
+    </button>
   );
 };
 
@@ -263,7 +291,6 @@ const Stickers = ({ values, uniqueIdentifier }) => {
     </div>
   );
 };
-
 const ULList = ({ values, uniqueIdentifier }) => {
   return (
     <div className="list padded">
