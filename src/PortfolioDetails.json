@@ -156,14 +156,14 @@
       "content": [
         {
           "subTitle": "A different take on a to-do list",
-          "title": "Sticky notes app",
+          "title": "Sticky notes",
           "date": "ReactJS",
           "about": "One of my starting projects in ReactJS. Took inspiration from to-do list app projects and put my own spin on it. You can view it  @here@https://sticky-notes-react-js.vercel.app@.",
           "content": [
             {
               "type": "full-image",
               "src": "/assets/images/sticky-notes-app.png",
-              "caption": "Sticky notes app"
+              "caption": "Sticky notes"
             },
             {
               "type": "text",
@@ -174,21 +174,21 @@
               "items": [
                 "The basics of ReactJS. Improved my understanding of it's most used hooks.",
                 "The ins and outs of *Framer motion* library and it's usage.",
-                "Storing user information in the form of cookies and integrating them seamlessly with a React app."
+                "Storing user information in the user's local storage and integrating it seamlessly with a React app."
               ]
             }
           ]
         },
         {
           "subTitle": "Streaming sources for any media",
-          "title": "Streaming locator app",
+          "title": "Streaming locator",
           "date": "ReactJS",
           "about": "A more complex web app which incorporates multiple APIs to locate streams for any piece of media. You can view it  @here@https://streaming-locator.vercel.app@.",
           "content": [
             {
               "type": "full-image",
               "src": "/assets/images/streaming-finder-app.png",
-              "caption": "Streams finder app"
+              "caption": "Streams finder"
             },
             {
               "type": "text",

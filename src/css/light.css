@@ -7,6 +7,12 @@
 
         .main {
                 color: #111;
+                background-image:
+                        linear-gradient(to right, #ddd 1px, transparent 1px),
+                        linear-gradient(to bottom, #ddd 1px, transparent 1px),
+                        linear-gradient(to right, transparent 50%, #ddd 50%, #ddd 52%, transparent 52%),
+                        linear-gradient(to bottom, transparent 50%, #ddd 50%, #ddd 52%, transparent 52%);
+                background-size: 50px 50px;
         }
 
         .loader-container {

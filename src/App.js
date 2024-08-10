@@ -56,6 +56,7 @@ export default function App() {
             </button>
             <section className="about">
               <div className="my-image">
+                <div className="backgroud-spinner"></div>
                 <div className="my-image-container">
                   <img
                     src={PortfolioDetails.hero.profileImage}
