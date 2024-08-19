@@ -801,3 +801,11 @@ ul.pretty-list li .list-text {
                 justify-content: flex-end;
         }
 }
+
+.medium-zoom-overlay {
+        z-index: 900;
+}
+
+.medium-zoom-image--opened {
+        z-index: 999;
+}

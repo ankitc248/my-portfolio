@@ -3,6 +3,8 @@ import "./css/main.css";
 import "./css/light.css";
 import PortfolioDetails from "./PortfolioDetails.json";
 import DeveloperFooter from "./components/developerFooter.jsx";
+import mediumZoom from "medium-zoom";
+
 export default function App() {
   const [wholeLoaded, setWholeLoaded] = useState(false);
   const [theme, setTheme] = useState("dark");
@@ -21,7 +23,15 @@ export default function App() {
       window.addEventListener("load", onPageLoad, false);
       return () => window.removeEventListener("load", onPageLoad);
     }
-  }, [wholeLoaded]);
+  }, []);
+
+  useEffect(() => {
+    mediumZoom(".zoomable", {
+      background: "#000",
+      margin: 10,
+      scrollOffset: 100,
+    });
+  }, []);
 
   return (
     <main
@@ -63,7 +73,7 @@ export default function App() {
                     alt="profile"
                     width={100}
                     height={100}
-                    className=""
+                    className="zoomable"
                   />
                 </div>
               </div>
@@ -218,7 +228,12 @@ const SectionBody = ({ item, uniqueIdentifier, index }) => {
                 }
                 className="full-image"
               >
-                <img src={subItem.src} alt="" loading="lazy" />
+                <img
+                  src={subItem.src}
+                  alt=""
+                  loading="lazy"
+                  className="zoomable"
+                />
                 <span className="img-caption">{subItem.caption}</span>
               </div>
             );
