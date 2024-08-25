@@ -3,7 +3,7 @@
     "name": "Ankit Singh Chauhan",
     "subTitle": "AVAILABLE FOR HIRE",
     "aboutText": "Self taught web developer with a passion for learning new web technologies. Constantly looking to develop my skills while also growing professionally.",
-    "profileImage": "/assets/images/profile-image-blur.jpg",
+    "profileImage": "/assets/images/profile-image-blur.avif",
     "accentColorDark": "#C7F0A8",
     "accentColorLight": "#00AA00"
   },
@@ -33,7 +33,7 @@
             },
             {
               "type": "full-image",
-              "src": "/assets/images/message-extension.jpeg",
+              "src": "/assets/images/message-extension.avif",
               "caption": "Microsoft Teams Application"
             }
           ]
@@ -56,7 +56,7 @@
             },
             {
               "type": "full-image",
-              "src": "/assets/images/customize-garments-site.png",
+              "src": "/assets/images/customize-garments-site.avif",
               "caption": "customizegarments.com"
             },
             {
@@ -68,7 +68,7 @@
             },
             {
               "type": "full-image",
-              "src": "/assets/images/eclothes-site.png",
+              "src": "/assets/images/eclothes-site.avif",
               "caption": "eclothes.com"
             }
           ]
@@ -162,7 +162,7 @@
           "content": [
             {
               "type": "full-image",
-              "src": "/assets/images/sticky-notes-app.png",
+              "src": "/assets/images/sticky-notes-app.avif",
               "caption": "Sticky notes"
             },
             {
@@ -187,7 +187,7 @@
           "content": [
             {
               "type": "full-image",
-              "src": "/assets/images/streaming-finder-app.png",
+              "src": "/assets/images/streaming-finder-app.avif",
               "caption": "Streams finder"
             },
             {
@@ -212,7 +212,7 @@
           "content": [
             {
               "type": "full-image",
-              "src": "/assets/images/lyrical-player.jpg",
+              "src": "/assets/images/lyrical-player.avif",
               "caption": "Lyrical player"
             },
             {
@@ -237,7 +237,7 @@
           "content": [
             {
               "type": "full-image",
-              "src": "/assets/images/snakey-boi.png",
+              "src": "/assets/images/snakey-boi.avif",
               "caption": "Snakey boi"
             },
             {
