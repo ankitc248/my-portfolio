@@ -36,12 +36,12 @@
 .developer-links a .link-icon img {
         width:25px;
         height:25px;
-        filter: invert(28%) sepia(0%) saturate(0%) hue-rotate(161deg) brightness(150%) contrast(95%);
+        filter: invert(28%) sepia(0%) saturate(0%) hue-rotate(161deg) brightness(200%) contrast(95%);
         transition: all 0.2s ease;
 }
 
 .developer-links a:hover .link-icon img,
 .developer-links a:active .link-icon img,
 .developer-links a:focus .link-icon img {
-        filter: invert(59%) sepia(4%) saturate(19%) hue-rotate(338deg) brightness(190%) contrast(87%);
+        filter: invert(59%) sepia(4%) saturate(19%) hue-rotate(338deg) brightness(200%) contrast(87%);
 }

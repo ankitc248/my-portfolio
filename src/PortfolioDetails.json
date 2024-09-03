@@ -2,7 +2,7 @@
   "hero": {
     "name": "Ankit Singh Chauhan",
     "subTitle": "AVAILABLE FOR HIRE",
-    "aboutText": "Self taught web developer with a passion for learning new web technologies. Constantly looking to develop my skills while also growing professionally.",
+    "aboutText": "Frontend Developer specializing in React.js and Vue.js with a strong focus on creating sleek and intuitive user interfaces.",
     "profileImage": "/assets/images/profile-image-blur.avif",
     "accentColorDark": "#C7F0A8",
     "accentColorLight": "#00AA00"
@@ -132,7 +132,7 @@
           "subTitle": "Jaypee Institute of Information Technology",
           "title": "Bachelor of Technology in CSE",
           "date": "2016 - 2020",
-          "about": "Completed my graduation in Computer Science and Engineering from JIIT - 62, Noida with a *CGPA of 7.0*. Got to be around a lot of smart minds and experience different fields of technology. Tried my hand at many different fields and finally decided to pursue *Web Development*.",
+          "about": "Completed my graduation in Computer Science and Engineering with a *CGPA of 7.0*. Got to be around a lot of smart minds and experience different fields of technology. Tried my hand at many different fields and finally decided to pursue *Web Development*.",
           "content": [
             {
               "type": "text",
@@ -153,12 +153,15 @@
       "sequence": 3,
       "header": "Projects",
       "description": "I am always working on a project whenever I get the time. This helps me in exploring new ideas and learning new technologies. Currently most of my projects are related to JS Frameworks like *NodeJS*, *ReactJS* and just recently *NextJS*. Some of the notable ones are listed below.",
+      "smallDescription": "Exploring creative ideas and learning new technologies",
       "content": [
         {
           "subTitle": "A different take on a to-do list",
           "title": "Sticky notes",
           "date": "ReactJS",
           "about": "One of my starting projects in ReactJS. Took inspiration from to-do list app projects and put my own spin on it. You can view it  @here@https://sticky-notes-react-js.vercel.app@.",
+          "liveLink": "https://sticky-notes-react-js.vercel.app/",
+          "githubLink": "https://github.com/ankitc248/sticky-notes-reactJS",
           "content": [
             {
               "type": "full-image",
@@ -184,6 +187,8 @@
           "title": "Streaming locator",
           "date": "ReactJS",
           "about": "A more complex web app which incorporates multiple APIs to locate streams for any piece of media. You can view it  @here@https://streaming-locator.vercel.app@.",
+          "githubLink": "https://github.com/ankitc248/streaming-locator",
+          "liveLink": "https://streaming-locator.vercel.app/",
           "content": [
             {
               "type": "full-image",
@@ -209,6 +214,8 @@
           "title": "Lyrical player",
           "date": "ReactJS",
           "about": "A custom music player that utlizes Media Player API and retrieves lyrics for a small selection of songs. The lyrics are synced with the music and can be used to seek to any part of the song. You can view it  @here@https://lyrical-player.vercel.app/@.",
+          "githubLink": "https://github.com/ankitc248/lyrical-player",
+          "liveLink": "https://lyrical-player.vercel.app/",
           "content": [
             {
               "type": "full-image",
@@ -234,6 +241,8 @@
           "title": "Snakey boi",
           "date": "ReactJS",
           "about": "A fun project in which I tried to recreate the classic snake game we used to play in our childhood using react fundamentals. You can view it  @here@https://snakey-boi.vercel.app/@.",
+          "githubLink": "https://github.com/ankitc248/snakey-boi",
+          "liveLink": "https://snakey-boi.vercel.app/",
           "content": [
             {
               "type": "full-image",
