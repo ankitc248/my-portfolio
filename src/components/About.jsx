@@ -12,16 +12,15 @@ const About = ({ hero }) => (
           <img
             src={hero.profileImage}
             alt="profile"
-            width={90}
-            height={90}
+            width={80}
+            height={80}
             className="zoomable"
           />
         </div>
       </div>
       <div className="my-name">
         <h1 className="title">
-          Hi
-          <span className="wave">👋</span>
+          Hi<span className="wave">👋</span>
           <span>, I'm Ankit</span>
         </h1>
         <div className="my-text">

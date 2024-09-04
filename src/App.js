@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Suspense } from "react";
+import React, { Suspense } from "react";
 import "./css/main.css";
 import PortfolioDetails from "./PortfolioDetails.json";
 import {
@@ -15,36 +15,8 @@ const Work = React.lazy(() => import("./components/Work.jsx"));
 const Education = React.lazy(() => import("./components/Education.jsx"));
 // Main App Component
 export default function App() {
-  const [wholeLoaded, setWholeLoaded] = useState(false);
-  const [theme, setTheme] = useState("dark");
-
-  // useEffect(() => {
-  //   const onPageLoad = () => {
-  //     setWholeLoaded(true);
-  //   };
-  //   if (document.readyState === "complete") {
-  //     onPageLoad();
-  //   } else {
-  //     window.addEventListener("load", onPageLoad, false);
-  //     return () => window.removeEventListener("load", onPageLoad);
-  //   }
-  // }, []);
-
   return (
-    <main
-      className={`main`}
-      style={{
-        "--accent-color":
-          theme === "light"
-            ? PortfolioDetails.hero.accentColorLight
-            : PortfolioDetails.hero.accentColorDark,
-      }}
-    >
-      {/* <div
-        className={`loader-container stickers ${wholeLoaded ? "hidden" : ""}`}
-      >
-        <span className="loader-text sticker">fetching...</span>
-      </div> */}
+    <main className="main">
       <Router>
         <section className="center-container">
           <Navbar items={[]} />
