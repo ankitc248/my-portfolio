@@ -2,7 +2,7 @@ import { transformText } from "../helpers/Helpers";
 import DeveloperFooter from "./DeveloperFooter";
 import PropTypes from "prop-types";
 import TechStack from "./TechStack";
-
+import { Mail } from "lucide-react";
 const About = ({ hero }) => (
   <section>
     <div className="about">
@@ -19,11 +19,14 @@ const About = ({ hero }) => (
         </div>
       </div>
       <div className="my-name">
-        <h1 className="title">{hero.name}</h1>
+        <h1 className="title">{hero.welcomeText}</h1>
         <div className="my-text">
           <p>{transformText(hero.aboutText)}</p>
         </div>
-        <h2 className="sub-title">{transformText(hero.subTitle)}</h2>
+        {/* <h2 className="sub-title">{transformText(hero.subTitle)}</h2> */}
+        <div className="email">
+          <Mail size={16} /> <a href={`mailto:${hero.email}`}>{hero.email}</a>
+        </div>
         <div className="my-links">
           <DeveloperFooter />
         </div>

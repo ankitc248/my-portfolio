@@ -1,17 +1,8 @@
 import PortfolioDetails from "../PortfolioDetails.json";
 import { transformText } from "../helpers/Helpers";
-import mediumZoom from "medium-zoom";
-import { useEffect } from "react";
 
 export default function Work() {
   const workDetails = PortfolioDetails.sections.workExperience.content;
-  useEffect(() => {
-    mediumZoom(".zoomable", {
-      background: "#000",
-      margin: 10,
-      scrollOffset: 100,
-    });
-  }, []);
   return (
     <section className="work-section">
       <p className="section-description">
