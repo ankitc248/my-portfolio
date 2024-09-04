@@ -13,7 +13,7 @@ export default function Education() {
         <div className="image-container">
           <img
             className="banner-image"
-            src="/assets/images/jiit-noida.avif"
+            src={education[0].bannerImage}
             alt="education"
           />
           <span className="image-caption">{education[0].subTitle}</span>

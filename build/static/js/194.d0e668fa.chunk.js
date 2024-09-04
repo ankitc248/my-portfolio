@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_portfolio_react=self.webpackChunkmy_portfolio_react||[]).push([[194],{194:(e,s,t)=>{t.r(s),t.d(s,{default:()=>r});var o=t(579);function r(){return(0,o.jsxs)("div",{className:"not-found",children:[(0,o.jsx)("img",{src:"/assets/images/not-found.avif",alt:"404"}),(0,o.jsx)("p",{children:"how did you get here?"})]})}}}]);
+//# sourceMappingURL=194.d0e668fa.chunk.js.map

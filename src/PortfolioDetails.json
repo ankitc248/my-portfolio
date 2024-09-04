@@ -2,7 +2,7 @@
   "hero": {
     "name": "Ankit Singh Chauhan",
     "subTitle": "AVAILABLE FOR HIRE",
-    "aboutText": "Frontend Developer specializing in React.js and Vue.js with a strong focus on creating sleek and intuitive user interfaces.",
+    "aboutText": "Frontend Developer specializing in *React.js* and *Vue.js* with a strong focus on creating sleek and intuitive user interfaces.",
     "profileImage": "/assets/images/profile-image-blur.avif",
     "accentColorDark": "#C7F0A8",
     "accentColorLight": "#00AA00"
@@ -15,8 +15,12 @@
       "content": [
         {
           "subTitle": "Private Equity Front Office (PEFO)",
-          "title": "Software Developer",
+          "title": "Full Stack Developer",
           "date": "2023 - 2024",
+          "siteLink": "https://pefrontoffice.com/",
+          "fullDate": "October 2023 - Present",
+          "bannerImage": "/assets/images/message-extension.avif",
+          "bannerCaption": "Microsoft Teams Application",
           "about": "Joined this company after 2 year of experience of working in web development. Got to work on many interesting integrations for their CRM software, ranging from a search solution for their help center to developing a MS teams application for their CRM.",
           "content": [
             {
@@ -41,7 +45,11 @@
         {
           "subTitle": "Tukatech Private Ltd",
           "title": "Web Developer",
+          "fullDate": "April 2021 - October 2023",
           "date": "2021 - 2023",
+          "siteLink": "https://tukatech.com/",
+          "bannerImage": "/assets/images/eclothes-site.avif",
+          "bannerCaption": "eclothes.tukatech.com",
           "about": "Started my web development journey with this company. Joined as a junior then got promoted after the senior web developer left. Had to take on a lot of new responibilities after his departure, which I did head on and got to work on a lot of interesting tasks.",
           "content": [
             {
@@ -132,6 +140,8 @@
           "subTitle": "Jaypee Institute of Information Technology",
           "title": "Bachelor of Technology in CSE",
           "date": "2016 - 2020",
+          "siteLink": "https://jiit.ac.in/",
+          "bannerImage": "/assets/images/jiit-noida.jpg",
           "about": "Completed my graduation in Computer Science and Engineering with a *CGPA of 7.0*. Got to be around a lot of smart minds and experience different fields of technology. Tried my hand at many different fields and finally decided to pursue *Web Development*.",
           "content": [
             {

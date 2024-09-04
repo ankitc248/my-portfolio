@@ -11,7 +11,7 @@ const navbarDetails = {
   about: ["About me", User],
   projects: ["Projects", FlaskConical],
   indicator: "Current",
-  work: ["Work", BriefcaseBusiness],
+  work: ["Work Experience", BriefcaseBusiness],
   education: ["Education", GraduationCap],
 };
 
