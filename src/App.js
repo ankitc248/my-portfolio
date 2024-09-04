@@ -1,7 +1,6 @@
 import React, { useEffect, useState, Suspense } from "react";
 import "./css/main.css";
 import PortfolioDetails from "./PortfolioDetails.json";
-import mediumZoom from "medium-zoom";
 import {
   BrowserRouter as Router,
   Routes,
@@ -19,25 +18,17 @@ export default function App() {
   const [wholeLoaded, setWholeLoaded] = useState(false);
   const [theme, setTheme] = useState("dark");
 
-  useEffect(() => {
-    const onPageLoad = () => {
-      setWholeLoaded(true);
-    };
-    if (document.readyState === "complete") {
-      onPageLoad();
-    } else {
-      window.addEventListener("load", onPageLoad, false);
-      return () => window.removeEventListener("load", onPageLoad);
-    }
-  }, []);
-
-  useEffect(() => {
-    mediumZoom(".zoomable", {
-      background: "#000",
-      margin: 10,
-      scrollOffset: 100,
-    });
-  }, []);
+  // useEffect(() => {
+  //   const onPageLoad = () => {
+  //     setWholeLoaded(true);
+  //   };
+  //   if (document.readyState === "complete") {
+  //     onPageLoad();
+  //   } else {
+  //     window.addEventListener("load", onPageLoad, false);
+  //     return () => window.removeEventListener("load", onPageLoad);
+  //   }
+  // }, []);
 
   return (
     <main
