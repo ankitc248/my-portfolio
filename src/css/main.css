@@ -234,7 +234,7 @@ section {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
         align-items: center;
 }
 
@@ -255,6 +255,49 @@ section {
         background-color: rgba(0, 0, 0, 0.5);
         border: solid 1px var(--accent-color);
 }
+
+.wave {
+        animation-name: wave-animation;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        transform-origin: 70% 70%;
+        display: inline-block;
+}
+
+@keyframes wave-animation {
+        0% {
+                transform: rotate(0.0deg)
+        }
+
+        10% {
+                transform: rotate(14.0deg)
+        }
+
+        20% {
+                transform: rotate(-8.0deg)
+        }
+
+        30% {
+                transform: rotate(14.0deg)
+        }
+
+        40% {
+                transform: rotate(-4.0deg)
+        }
+
+        50% {
+                transform: rotate(10.0deg)
+        }
+
+        60% {
+                transform: rotate(0.0deg)
+        }
+
+        100% {
+                transform: rotate(0.0deg)
+        }
+}
+
 
 .email {
         display: flex;

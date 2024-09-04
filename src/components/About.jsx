@@ -19,7 +19,11 @@ const About = ({ hero }) => (
         </div>
       </div>
       <div className="my-name">
-        <h1 className="title">{hero.welcomeText}</h1>
+        <h1 className="title">
+          Hi
+          <span className="wave">👋</span>
+          <span>, I'm Ankit</span>
+        </h1>
         <div className="my-text">
           <p>{transformText(hero.aboutText)}</p>
         </div>
