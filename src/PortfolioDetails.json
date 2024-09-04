@@ -5,7 +5,7 @@
     "email": "ankitsinghc098@gmail.com",
     "welcomeText": "Hi👋, I'm Ankit",
     "aboutText": "Frontend Developer specializing in *React.js* and *Vue.js* with a strong focus on creating sleek and intuitive user interfaces.",
-    "profileImage": "/assets/images/profile-image-blur.avif",
+    "profileImage": "/assets/images/profile-image-blur.webp",
     "accentColorDark": "#C7F0A8",
     "accentColorLight": "#00AA00"
   },

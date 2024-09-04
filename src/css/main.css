@@ -9,6 +9,14 @@
         --background-end-rgb: 20, 20, 20;
 }
 
+@font-face {
+        font-family: "Inter";
+        src: url('/public/assets/fonts/Inter-Regular.woff2') format("woff2");
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+}
+
 * {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -876,7 +884,7 @@ section.work-section {
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
-                font-weight: bold;
+                font-weight: 600;
         }
 }
 

@@ -57,6 +57,7 @@ export default function Navbar() {
                   to={link[0]}
                   onMouseEnter={() => setActiveSection(title)}
                   onMouseLeave={() => setActiveSection(initialSection)}
+                  aria-label={title}
                 >
                   <Icon size={20} />
                 </Link>
