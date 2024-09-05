@@ -12,8 +12,8 @@ const About = ({ hero }) => (
           <img
             src={hero.profileImage}
             alt="profile"
-            width={80}
-            height={80}
+            width={90}
+            height={90}
             className="zoomable"
           />
         </div>

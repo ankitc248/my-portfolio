@@ -10,6 +10,21 @@ export default function Education() {
       </p>
       <span className="separator"></span>
       <div className="education-card">
+        <div className="education-card-body header">
+          <h2 className="title">
+            {education[0].title}
+            <p>{education[0].subTitle}</p>
+          </h2>
+          <div className="date-sticker">
+            <span className="start">
+              {education[0].date.split("-")[0].trim()}
+            </span>
+            <span className="middle-separator"></span>
+            <span className="end">
+              {education[0].date.split("-")[1].trim()}
+            </span>
+          </div>
+        </div>
         <div className="image-container">
           <img
             className="banner-image"
@@ -19,11 +34,6 @@ export default function Education() {
           <span className="image-caption">{education[0].subTitle}</span>
         </div>
         <div className="education-card-body">
-          <h2 className="title">
-            {education[0].title}
-            <p>{education[0].date}</p>
-          </h2>
-          {/* <p>{education[0].subTitle}</p> */}
           <p>{transformText(education[0].about)}</p>
         </div>
       </div>

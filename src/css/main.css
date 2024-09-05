@@ -537,7 +537,7 @@ section {
 
 .projects-grid {
         width: 100%;
-        padding: 1rem;
+        padding-block: 1rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
@@ -662,13 +662,11 @@ section {
         0% {
                 transform: translateY(50px);
                 opacity: 0;
-                filter: blur(5px);
         }
 
         100% {
                 transform: translateX(0%);
                 opacity: 1;
-                filter: blur(0px);
         }
 }
 
@@ -771,6 +769,7 @@ section {
         margin-bottom: 1rem;
         font-size: 14px;
         text-align: center;
+        text-wrap: balance;
 }
 
 section.education,
@@ -779,24 +778,28 @@ section.work-section {
         animation: swipe-in 0.5s ease forwards;
         opacity: 0;
 }
-
+.education-card{
+        margin-top: 2rem;
+}
+.education-card .start,.education-card .end{
+        width: 40px !important;
+}
 .education-card,
 .work-card {
         position: relative;
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 0.5rem;
         max-width: 500px;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 12px;
-        border: solid 1px #222;
-        padding: 0.5rem;
-        margin-block: 1rem;
         animation: swipe-in 0.5s ease forwards;
         opacity: 0;
         background-size: cover;
         overflow: hidden;
-        margin-bottom: 2rem;
+        padding-bottom: 0.5rem;
+
+        .header {
+                text-align: center;
+        }
 
         &:hover {
                 img {
@@ -828,24 +831,21 @@ section.work-section {
         }
 
         .banner-image {
-                min-width: 100%;
                 width: 100%;
                 object-fit: cover;
-                aspect-ratio: 16/9;
-                max-height: 250px;
                 border-radius: 12px;
+                margin: 0;
+                display: block;
         }
 
         .education-card-body {
                 display: flex;
                 flex-direction: column;
                 padding: 0.25rem;
-                padding-bottom: 0.5rem;
-                gap: 0.5rem;
 
                 p {
                         font-size: 14px;
-                        color: #aaa;
+                        color: #ddd;
                         line-height: 1.75rem;
                 }
         }
@@ -863,28 +863,39 @@ section.work-section {
 .work-section {
         .work-grid {
                 position: relative;
-                margin-block: 1rem;
                 /* text-align: center; */
+                margin-block: 2rem;
+                gap: 2rem;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
         }
 
 
-        .date-sticker {
-                padding: 0.5rem 1rem;
-                border: solid 1px #222;
-                border-radius: 99px;
-                background-color: rgba(0, 0, 0, 0.5);
-                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-                color: #ddd;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
+}
+
+.date-sticker {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-block: 0.25rem;
+
+        .start,
+        .end {
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
-                font-weight: 600;
+                color: #ddd;
+                width: 60px;
+        }
+
+        .middle-separator {
+                background-color: rgba(255, 255, 255, 0.3);
+                height: 1.5px;
+                border-radius: 9px;
+                flex: 1;
         }
 }
 
@@ -934,6 +945,7 @@ section.work-section {
         .navbar ul {
                 height: 60px;
                 padding-inline: 1rem;
+                background-color: rgba(255, 255, 255, 0.25);
         }
 
         .navbar .icon.active {
@@ -946,6 +958,9 @@ section.work-section {
         }
 
         .main::after {
-                background-size: 3dvw 3dvw;
+                background-size: 1dvw 1dvw;
+        }
+        .cool-body{
+                padding-bottom: 6rem;
         }
 }
