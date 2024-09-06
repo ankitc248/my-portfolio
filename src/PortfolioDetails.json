@@ -6,6 +6,7 @@
     "welcomeText": "Hi👋, I'm Ankit",
     "aboutText": "Frontend Developer specializing in *React.js* and *Vue.js* with a strong focus on creating sleek and intuitive user interfaces.",
     "profileImage": "/assets/images/my-image.avif",
+    "dogImage": "/assets/images/my-dog.jpg",
     "accentColorDark": "#C7F0A8",
     "accentColorLight": "#00AA00"
   },

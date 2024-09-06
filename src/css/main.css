@@ -187,7 +187,6 @@ section {
         display: flex;
         -webkit-box-align: center;
         -ms-flex-align: center;
-        align-items: start;
         gap: 0.5rem;
         padding: 1rem;
         max-width: 700px;
@@ -841,6 +840,7 @@ section.work-section {
                 border-radius: 12px;
                 margin: 0;
                 display: block;
+                min-height: 100%;
         }
 
         .education-card-body {
