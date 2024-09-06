@@ -19,7 +19,10 @@ export default function Education() {
             <span className="start">
               {education[0].date.split("-")[0].trim()}
             </span>
-            <span className="middle-separator"></span>
+            <span className="middle-separator">
+              <span className="starter"></span>
+              <span className="ender"></span>
+            </span>
             <span className="end">
               {education[0].date.split("-")[1].trim()}
             </span>
