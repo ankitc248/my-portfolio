@@ -23,7 +23,10 @@ export default function Work() {
                 <p>{work.subTitle}</p>
                 <div className="date-sticker">
                   <span className="start">{fullDate[0].trim()}</span>
-                  <span className="middle-separator"></span>
+                  <span className="middle-separator">
+                    <span className="starter"></span>
+                    <span className="ender"></span>
+                  </span>
                   <span className="end">{fullDate[1].trim()}</span>
                 </div>
               </div>
