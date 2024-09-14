@@ -6,7 +6,7 @@ export default function Education() {
     <section className="education">
       {/* <h2>Education</h2> */}
       <p className="section-description">
-        Learning, growth, challenges, exploration, and networking
+        {PortfolioDetails.sections.education.description}
       </p>
       <span className="separator"></span>
       <div className="education-card">

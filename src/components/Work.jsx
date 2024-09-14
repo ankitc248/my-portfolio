@@ -6,7 +6,7 @@ export default function Work() {
   return (
     <section className="work-section">
       <p className="section-description">
-        Pursuit of purpose through effort and dedication
+        {PortfolioDetails.sections.workExperience.description}
       </p>
       <span className="separator"></span>
       <div className="work-grid item-grid">
