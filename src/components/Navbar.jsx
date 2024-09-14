@@ -45,7 +45,12 @@ export default function Navbar() {
             const Icon = link[1][1];
             const title = link[1][0];
             return link[0] === "indicator" ? (
-              <li className="middle-item active-section">{activeSection}</li>
+              <li
+                key={link[0] + "_" + index}
+                className="middle-item active-section"
+              >
+                {activeSection}
+              </li>
             ) : (
               <li
                 key={link[0] + "_" + index}

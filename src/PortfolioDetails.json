@@ -277,6 +277,44 @@
           ]
         }
       ]
+    },
+    "assignments": {
+      "sequence": 3,
+      "header": "Assignments",
+      "description": "Assignments that I did for company interviews.",
+      "smallDescription": "Assignments that I did for company interviews",
+      "content": [
+        {
+          "subTitle": "Redesigned a page for tyreplex.com",
+          "title": "Tyreplex Redesign",
+          "date": "ReactJS",
+          "about": "",
+          "liveLink": "https://tyreplex-assignment-opal.vercel.app/",
+          "githubLink": "https://github.com/ankitc248/tyreplex-assignment",
+          "content": [
+            {
+              "type": "full-image",
+              "src": "/assets/images/tyreplex.avif",
+              "caption": "Sticky notes"
+            }
+          ]
+        },
+        {
+          "subTitle": "Designed a dashboard for speedybrand.io",
+          "title": "Streamify Dashboard",
+          "date": "ReactJS",
+          "about": "",
+          "liveLink": "https://streamify-dashboard-indol.vercel.app/",
+          "githubLink": "https://github.com/ankitc248/streamify-dashboard",
+          "content": [
+            {
+              "type": "full-image",
+              "src": "/assets/images/streamify-dashboard.avif",
+              "caption": "Streams finder"
+            }
+          ]
+        }
+      ]
     }
   }
 }

@@ -15,6 +15,7 @@
     "react-router": "^6.26.1",
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
+    "react-switch": "^7.0.0",
     "simple-icons": "^13.8.0",
     "web-vitals": "^2.1.4"
   },
@@ -23,7 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postbuild": "copy vercel.json .\\build\\"
+    "postbuild": "copy vercel.json .\\build\\",
+    "prepare": "husky"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "husky": "^9.1.6",
     "speed-measure-webpack-plugin": "^1.5.0"
   }
 }
