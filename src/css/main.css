@@ -933,13 +933,12 @@ section.work-section {
 
 .mobile-indicator {
         position: absolute;
-        top: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
+        /* top: 1rem; */
+        /* left: 50%;
+        transform: translateX(-50%); */
         padding: 0.25rem 0.5rem;
         height: 40px;
-        border: solid 1px #222;
-        border-radius: 99px;
+        border-bottom: solid 1px #222;
         background-color: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(5px);
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -947,7 +946,7 @@ section.work-section {
         display: none;
         align-items: center;
         justify-content: center;
-        width: 200px;
+        width: 100%;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -981,7 +980,8 @@ section.work-section {
         }
 
         .navbar:hover {
-                scale: 1;
+                top: auto;
+                bottom: 1rem;
         }
 
         .main::after {
