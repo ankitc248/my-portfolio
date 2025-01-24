@@ -49,6 +49,7 @@ export default function ProjectCards() {
                 <p className="sub-title">{project.subTitle}</p>
                 <div className="project-links">
                   <a href={project.githubLink} target="_blank" rel="noreferrer">
+                    <span className="label">REPO</span>
                     <Github size={16} />
                   </a>
                   <a
@@ -57,6 +58,7 @@ export default function ProjectCards() {
                     rel="noreferrer"
                     className="external-link"
                   >
+                    <span className="label">LIVE</span>
                     <ExternalLink size={16} />
                   </a>
                 </div>
@@ -83,6 +85,7 @@ export default function ProjectCards() {
               <p className="sub-title">{project.subTitle}</p>
               <div className="project-links">
                 <a href={project.githubLink} target="_blank" rel="noreferrer">
+                  <span className="label">REPO</span>
                   <Github size={16} />
                 </a>
                 <a
@@ -91,6 +94,7 @@ export default function ProjectCards() {
                   rel="noreferrer"
                   className="external-link"
                 >
+                  <span className="label">LIVE</span>
                   <ExternalLink size={16} />
                 </a>
               </div>

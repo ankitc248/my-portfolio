@@ -17,11 +17,21 @@
       "description": "Pursuit of purpose through effort and dedication",
       "content": [
         {
+          "subTitle": "Speedy Labs",
+          "title": "Frontend Engineer",
+          "date": "2024 - 2025",
+          "siteLink": "https://speedybrand.io/",
+          "fullDate": "Oct 2024 - Present",
+          "bannerImage": "/assets/images/speedy-rebates-dashboard.png",
+          "bannerCaption": "Speedy Rebates Dashboard",
+          "about": "After a successful stint of 3 years in the web development industry, I joined *Speedy Labs(Youth Combinator Funded startup)* as a frontend engineer. I am tasked with building the frontend for their upcoming Rebates SaaS, which is a platform that allows users to track and manage their rebates. Got to get my hands dirty with the latest tech like NextJS, TailwindCSS, ShadcnUI, Lucid, and many more."
+        },
+        {
           "subTitle": "Private Equity Front Office (PEFO)",
           "title": "Full Stack Developer",
           "date": "2023 - 2024",
           "siteLink": "https://pefrontoffice.com/",
-          "fullDate": "Oct 2023 - Present",
+          "fullDate": "Oct 2023 - Oct 2024",
           "bannerImage": "/assets/images/message-extension.avif",
           "bannerCaption": "Microsoft Teams Application",
           "about": "Joined this company after 2 year of experience of working in web development. Got to work on many interesting integrations for their CRM software, ranging from a *search solution for their help center* to developing a *MS teams application* for their CRM.",
@@ -168,6 +178,21 @@
       "description": "I am always working on a project whenever I get the time. This helps me in exploring new ideas and learning new technologies. Currently most of my projects are related to JS Frameworks like *NodeJS*, *ReactJS* and just recently *NextJS*. Some of the notable ones are listed below.",
       "smallDescription": "Exploring creative ideas and learning new technologies",
       "content": [
+        {
+          "subTitle": "Weather forecast with an interesting UI",
+          "title": "What's the weather?",
+          "date": "ReactJS",
+          "about": "A weather forecast app with an interesting UI. You can view it  @here@https://weather-forecast-delta-ten.vercel.app@.",
+          "liveLink": "https://weather-forecast-delta-ten.vercel.app/",
+          "githubLink": "https://github.com/ankitc248/weather-forecast",
+          "content": [
+            {
+              "type": "full-image",
+              "src": "/assets/images/whats-the-weather.png",
+              "caption": "Sticky notes"
+            }
+          ]
+        },
         {
           "subTitle": "A different take on a to-do list",
           "title": "Sticky notes",
