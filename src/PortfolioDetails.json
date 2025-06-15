@@ -5,7 +5,7 @@
     "email": "ankitsinghc098@gmail.com",
     "welcomeText": "Hi👋, I'm Ankit",
     "aboutText": "Frontend Developer specializing in *React.js* and *Vue.js* with a strong focus on creating sleek and intuitive user interfaces.",
-    "profileImage": "/assets/images/my-image.jpg",
+    "profileImage": "/assets/images/profile-pic.jpeg",
     "dogImage": "/assets/images/my-dog.jpg",
     "accentColorDark": "#C7F0A8",
     "accentColorLight": "#00AA00"
@@ -155,7 +155,7 @@
           "date": "2016 - 2020",
           "siteLink": "https://jiit.ac.in/",
           "bannerImage": "/assets/images/jiit-noida.jpg",
-          "about": "Completed my graduation in Computer Science and Engineering with a *CGPA of 7.0*. Got to be around a lot of smart minds and experience different fields of technology. Tried my hand at many different fields and finally decided to pursue *Web Development*.",
+          "about": "Completed my graduation in Computer Science and Engineering from here. Got to be around a lot of smart minds and experience different fields of technology. Tried my hand at many different fields and finally decided to pursue *Web Development*.",
           "content": [
             {
               "type": "text",

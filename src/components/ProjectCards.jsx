@@ -12,7 +12,7 @@ export default function ProjectCards() {
     <div className="project-section">
       <p>{projects.smallDescription}</p>
       <span className="separator"></span>
-      <div className="show-assignments-control">
+      <div className="show-assignments-control" onClick={() => setShowAssignments(!showAssignments)}>
         Show Assignments
         <Switch
           onChange={() => setShowAssignments(!showAssignments)}

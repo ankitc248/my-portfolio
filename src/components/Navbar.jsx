@@ -38,7 +38,7 @@ export default function Navbar() {
   }, [initialSection]);
   return (
     <>
-      <span className="mobile-indicator">{activeSection}</span>
+      <span className="mobile-indicator"><span key={activeSection} className="fade-in">{activeSection}</span></span>
       <nav className="navbar">
         <ul>
           {Object.entries(navbarDetails).map((link, index) => {
@@ -46,10 +46,10 @@ export default function Navbar() {
             const title = link[1][0];
             return link[0] === "indicator" ? (
               <li
-                key={link[0] + "_" + index}
+                key={link[0] + "_" + index + "_"}
                 className="middle-item active-section"
               >
-                {activeSection}
+                <span key={link[0] + "_" + index + "_" + activeSection} className="fade-in">{activeSection}</span>
               </li>
             ) : (
               <li
