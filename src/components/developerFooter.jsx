@@ -18,6 +18,11 @@ export default function DeveloperFooter() {
       icon: "assets/website-icons/codepen-outline.svg",
       linkName: "codepen",
     },
+    {
+      link: "https://cssbattle.dev/player/melononlemon",
+      icon: "assets/website-icons/swords-crossed.svg",
+      linkName: "css-battle",
+    },
   ];
 
   return (
