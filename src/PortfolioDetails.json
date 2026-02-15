@@ -179,6 +179,21 @@
       "smallDescription": "Exploring creative ideas and learning new technologies",
       "content": [
         {
+          "subTitle": "Compact library that provides a scrollable container with hover-activated gradient indicators when content overflows",
+          "title": "react-scroll-indicators",
+          "date": "ReactJS",
+          "about": "A npm package that creates scroll indicators for a website. You can view it  @here@https://www.npmjs.com/package/react-scroll-indicators@.",
+          "liveLink": "https://www.npmjs.com/package/react-scroll-indicators",
+          "githubLink": "https://github.com/ankitc248/react-scroll-indicators",
+          "content": [
+            {
+              "type": "full-image",
+              "src": "/assets/images/react-scroll-indicators.jpg",
+              "caption": "React scroll indicators"
+            }
+          ]
+        },
+        {
           "subTitle": "Weather forecast with an interesting UI",
           "title": "What's the weather?",
           "date": "ReactJS",
@@ -189,7 +204,7 @@
             {
               "type": "full-image",
               "src": "/assets/images/whats-the-weather.png",
-              "caption": "Sticky notes"
+              "caption": "What's the weather?"
             }
           ]
         },
